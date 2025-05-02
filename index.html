@@ -270,7 +270,7 @@ In the image, the actor networks are denoted by policy networks. All observation
 
 For Bipedal Walker, all algorithms ran for 2 million training steps, with test episodes evaluating each epoch. Each epoch had 20000 steps.
 
-For Ant, all algorithms ran for 1.5 million training steps, with test episodes evaluating each epoch. Each epoch had 20000 steps.
+For Ant, all algorithms ran for 1.5 million training steps, with test episodes evaluating each epoch.
 
 <ul>
   <li> <h2 class="title is-4">Ant</h2></li>
@@ -310,7 +310,7 @@ For Ant, all algorithms ran for 1.5 million training steps, with test episodes e
     </figure>
   </div>
 </div>
-  <p>Based on the test ep scores, the modular approach seems to perform the best. Its actor loss reduces the fastest and settles at the smallest values, meaning the policy is finding actions the critic rates highly. Modular DDPG achieves the highest training and test episode scores and maintains the full 1600-step episode horizon for most rollouts, indicating it keeps the ant upright and moving for the maximum duration.
+  <p>Based on the test episode scores, the modular approach seems to perform the best. Its actor loss reduces the fastest and settles at the smallest values, meaning the policy is finding actions the critic rates highly. Modular DDPG achieves the highest training and test episode scores and maintains the full 1600-step episode horizon for most rollouts, indicating it keeps the ant upright and moving for the maximum duration.
     The hierarchical and hybrid agents outperform the vanilla DDPG approach. Both show smoothly decreasing actor loss and critic loss, and their reward values climb steadily. Although its actor loss falls, the vanilla approach’s critic’s poor estimates mislead the policy, resulting in lower episode scores and frequent early terminations. 
     Hence, decomposing the 8-joint ant problem, either fully (modular) or partially (hierarchical/hybrid), gives the critic clearer gradients and lets the policy explore more effectively, while the single monolithic actor-critic pair of vanilla DDPG struggles with coordination in this high-dimensional action space.
     </p>

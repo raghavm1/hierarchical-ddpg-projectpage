@@ -102,7 +102,7 @@
             <source src="static/videos/agent_run_bipedal_hybrid.mp4" type="video/mp4">
           </video>
           <h2 class="subtitle has-text-centered">
-            Using Bipedal Walker as our environment, we aim to learn a policy that can control the agent's joints in a hierarchical manner.
+            Test time output of our hierarchical policy in the Bipedal Walker environment that can control the agent's joints in a hierarchical manner.
           </h2>
         </div>
       </div>
@@ -114,7 +114,7 @@
             <source src="static/videos/agent_run_cheenti_hybrid.mp4" type="video/mp4">
           </video>
           <h2 class="subtitle has-text-centered">
-            Using Bullet's Ant environment, we aim to learn a policy that can control the agent's joints in a hierarchical manner.
+            Test time output of our hierarchical policy in the Ant environment that can control the agent's joints in a hierarchical manner.
           </h2>
         </div>
       </div>
@@ -227,7 +227,7 @@ In the image, the actor networks are denoted by policy networks. All observation
   </div>
 </section>
 
-<!-- Setup -->
+<!-- Experimental Setup -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
@@ -237,7 +237,17 @@ In the image, the actor networks are denoted by policy networks. All observation
           <p>
             We’ve leveraged Fabio Pardo’s Tonic RL library for setting up our environments and leveraging on the existing RL algorithms to develop our modular, hierarchical and hybrid approach on top of DDPG.
             Environments
-            To demonstrate hierarchical and modular characteristics, it is imperative to have a multi-dimensional action space. We are leveraging OpenAI's Gym for Bipedal Walker v3 and Bullet’s Ant environment to demonstrate our algorithm’s results. These environments are relatively lightweight and feasible to run in limited compute, while being appropriate for the task
+            To demonstrate hierarchical and modular characteristics, it is imperative to have a multi-dimensional action space. We are leveraging OpenAI's Gym for Bipedal Walker v3 and Bullet’s Ant environment to demonstrate our algorithm’s results. These environments are relatively lightweight and feasible to run in limited compute, while being appropriate for the task.
+            <ul>
+              <li><h3 class="title is-4">Bipedal Walker</h3>
+                <p>Actions are motor speed values in the [-1, 1] range for each of the 4 joints at both hips and knees.</p>
+                </li>
+                <br>
+                <li><h3 class="title is-4">Ant</h3>
+                  <p>The action space in this environment comprises 8 dimensions. Here the even indices pertain to the torque of the hip joints, and the odd indices pertain to the knee joints. All values are in the range of [-1, 1]
+                  </p>
+                  </li>
+            </ul>
             </p>
         </div>
       </div>
@@ -381,8 +391,10 @@ In the Bipedal environment, coordination amongst all joints is imperative due to
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
+      <h2 class="title">Citations</h2>
+      <sup>[1]</sup>Kulkarni, Tejas D., et al. "Hierarchical deep reinforcement learning: Integrating temporal abstraction and intrinsic motivation." Advances in neural information processing systems 29 (2016).
+      <br>
+      <sup>[2]</sup>Lillicrap, Timothy P., et al. "Continuous control with deep reinforcement learning." arXiv preprint arXiv:1509.02971 (2015).
     </div>
 </section>
 <!--End BibTex citation -->

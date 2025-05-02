@@ -169,7 +169,9 @@ A replay buffer is used that stores tuples of consecutive action and states. Spe
 
 For stable training, time-delayed copies of both the actor and target networks are used. While training, for each tuple in the replay buffer,  ‘state’ and ‘action’ values are fed through the main actor and critic networks, and the ‘next_state’ value is fed to the target actor network to obtain the ‘next_action’ values. Subsequently, both the ‘next_state’ and ‘next_action’ values are fed to the target critic network to obtain a Q(s’,a’) value. 
 
-The critic loss is formulated in a manner to reduce the difference between the Q(s,a) value estimates with the target Q(s’, a’) values produced by the target critic network. The structure of the loss follows the bellman update equation. 
+The critic loss is formulated in a manner to reduce the difference between the Q(s,a) value estimates with the target Q(s’, a’) values produced by the target critic network. The structure of the loss follows the Bellman update equation.
+<img src="./static/images/ddpg_critic_loss.png" alt="Modular Architecture"> 
+The actor network is updated by minimizing the negative of the expected Q value.
           </p>
         </div>
       </div>

@@ -24,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Academic Project Page</title>
+  <title>Hierarchical RL by decomposing Action Space on Actor-Critic Methods</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -52,50 +52,28 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title">Hierarchical RL by decomposing Action Space on Actor-Critic Methods</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
+                Aryaman Shaan<sup>*</sup>,</span>
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
+                  Garvit Banga<sup>*</sup>,</span>
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
+                    Raghav Mantri<sup>*</sup></span>
                   </span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                    <span class="author-block">New York University<br>2025</span>
+                    <span class="eql-cntrb"><small><br><sup>*</sup>Equal Contribution</small></span>
                   </div>
 
                   <div class="column has-text-centered">
                     <div class="publication-links">
-                         <!-- Arxiv PDF link -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
-
-                    <!-- Supplementary PDF link -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
-
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    <a href="https://github.com/raghavm1/heirarchical-ddpg" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -103,17 +81,6 @@
                     <span>Code</span>
                   </a>
                 </span>
-
-                <!-- ArXiv abstract Link -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
             </div>
           </div>
         </div>
@@ -124,17 +91,33 @@
 
 
 <!-- Teaser video-->
+<!-- Teaser video-->
 <section class="hero teaser">
   <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
-        type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
+    <div class="columns is-centered">
+      <!-- First video column -->
+      <div class="column">
+        <div class="hero-body">
+          <video poster="" id="bipedal-video" autoplay controls muted loop width="100%" style="max-height: 300px; object-fit: contain;">
+            <source src="static/videos/agent_run_bipedal_hybrid.mp4" type="video/mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">
+            Using Bipedal Walker as our environment, we aim to learn a policy that can control the agent's joints in a hierarchical manner.
+          </h2>
+        </div>
+      </div>
+      
+      <!-- Second video column -->
+      <div class="column">
+        <div class="hero-body">
+          <video poster="" id="cheenti-video" autoplay controls muted loop width="100%" style="max-height: 300px; object-fit: contain;">
+            <source src="static/videos/agent_run_cheenti_hybrid.mp4" type="video/mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">
+            Using Bullet's Ant environment, we aim to learn a policy that can control the agent's joints in a hierarchical manner.
+          </h2>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -148,8 +131,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
-          </p>
+            In Hierarchical RL, typically, different sub-policies handle different tasks that might be hierarchical in nature. Instead, we want to decompose the available multi-dimensional continuous action space across sub-policies while trying to learn an overall global task. We aim to experiment with variants of different hierarchies in environments pertaining to locomotion where multiple joints (our action space) are controlled. We aim to perform this study on actor-critic based algorithms, and experiment with a hybrid approach involving hierarchical and modular action policies.          </p>
         </div>
       </div>
     </div>
@@ -158,121 +140,243 @@
 <!-- End paper abstract -->
 
 
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
+<!-- Lit review section -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-2">Hierarchical Reinforcement Learning</h2>
+        <div class="content has-text-justified">
+          <p>
+            Hierarchical Reinforcement Learning <sup>[1]</sup> introduces the Hierarchical-DQN (h-DQN) framework, which combines hierarchical value functions operating at different temporal scales with intrinsic motivation. The high-level controller selects goals, while the low-level controller learns policies to achieve these goals, effectively decomposing the action space hierarchically. The approach demonstrates improved exploration and learning efficiency in environments with sparse rewards, such as the Atari game Montezuma's Revenge.          </p>
+        </div>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
     </div>
+    </div>
+  </div>
+</section>
+
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">DDPG (Deep Deterministic Policy Gradient)</h2>
+        <div class="content has-text-justified">
+          <p>
+            DDPG is an off-policy reinforcement learning algorithm that handles continuous action spaces. It follows an actor-critic framework and combines the advantages of policy gradient methods as well as DQNs. It was introduced by Lillicrap et al in 2015<sup>[2]</sup>. 
+
+A replay buffer is used that stores tuples of consecutive action and states. Specifically, tuples of the form (state, action, reward, next_state, terminating_condition). While training, random mini-batches are sampled from the replay buffer to train the network.
+
+For stable training, time-delayed copies of both the actor and target networks are used. While training, for each tuple in the replay buffer,  ‘state’ and ‘action’ values are fed through the main actor and critic networks, and the ‘next_state’ value is fed to the target actor network to obtain the ‘next_action’ values. Subsequently, both the ‘next_state’ and ‘next_action’ values are fed to the target critic network to obtain a Q(s’,a’) value. 
+
+The critic loss is formulated in a manner to reduce the difference between the Q(s,a) value estimates with the target Q(s’, a’) values produced by the target critic network. The structure of the loss follows the bellman update equation. 
+          </p>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<!-- Methodology -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-2">Methodology</h2>
+        <div class="content has-text-justified">
+          <p>
+            The primary objective of our project is to explore and compare the performance of policies that decompose the action space. In the actor-critic framework, this amounts to having a separate actor network for each dimension of the action space. In the case of environments like ‘Bipedal Walker’ and ‘Ant’, this results in creating separate actor networks that master the movements of each joint.
+
+The actions performed by each joint are aggregated and sent to a ‘global’ critic network to accurately determine the Q(s,a) values. 
+
+We experimented with various permutations of actor-critic networks with policies decomposed based on the action space:
+
+            <ul>
+              <li> <h2 class="title is-4">Monolithic</h2></li>
+              
+              <p>
+                This refers to vanilla DDPG and acts as our baseline model, wherein a single policy (actor) outputs the entire action space. 
+              </p>
+              <li> <h2 class="title is-4">Modular</h2></li>
+              <img src="./static/images/modular.png" alt="Modular Architecture">
+              <p>
+                Here, there is a separate policy (actor network) for each joint. They all take the observation/state separately as input and output the action of their respective joints. The actions are then aggregated along with the observation to pass into the critic network for fetching a Q value. 
+
+In the image, the actor networks are denoted by policy networks. All observations in the image below are of the same time step.
+
+              </p>
+              <li> <h2 class="title is-4">Hierarchical</h2></li>
+              <img src="./static/images/hierarchical.png" alt="Hierarchical Architecture">
+              <p>
+                In this approach, there is a separate actor network for each joint. The first actor network takes the observation as input and outputs the corresponding joint’s action. The observation and output action is then aggregated and sent to the second actor network. The second actor network’s action is then aggregated to the first actor network’s action and observation and sent to the third actor network. Essentially, the actor networks make decisions in a hierarchical manner, where the next dimension’s actions are dependent on the previously computed actions for that particular time step. Finally, all actions are aggregated and sent to the critic network. 
+
+              </p>
+              <li> <h2 class="title is-4">Hybrid</h2></li>
+              <img src="./static/images/hybrid.png" alt="Hierarchical Architecture">
+              <p>
+                In this approach, the idea of both the modular and hierarchical approaches is combined. We observed that for both the Ant and Bipedal Walker environments, there are multiple legs that each have two joints. Hence we came up with the following strategy: (i) each leg’s actions would be decided hierarchically such that the hip joint’s action would be sent to the knee joint as input (ii) the actions of all legs would be aggregated in a modular fashion to be sent to the critic network for processing. 
+
+              </p>
+            </ul>
+          </p>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<!-- Setup -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-2">Experimental Setup</h2>
+        <div class="content has-text-justified">
+          <p>
+            We’ve leveraged Fabio Pardo’s Tonic RL library for setting up our environments and leveraging on the existing RL algorithms to develop our modular, hierarchical and hybrid approach on top of DDPG.
+            Environments
+            To demonstrate hierarchical and modular characteristics, it is imperative to have a multi-dimensional action space. We are leveraging OpenAI's Gym for Bipedal Walker v3 and Bullet’s Ant environment to demonstrate our algorithm’s results. These environments are relatively lightweight and feasible to run in limited compute, while being appropriate for the task
+            </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Results and Analysis -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-2">Results and Analysis</h2>
+        <div class="content has-text-justified">
+          <p>
+          We compare the performance of the monolithic vanilla approach with modular, hierarchical and hybrid approaches on both environments using DDPG.
+
+For Bipedal Walker, all algorithms ran for 2 million training steps, with test episodes evaluating each epoch. Each epoch had 20000 steps.
+
+For Ant, all algorithms ran for 1.5 million training steps, with test episodes evaluating each epoch. Each epoch had 20000 steps.
+
+<ul>
+  <li> <h2 class="title is-4">Ant</h2></li>
+  <!-- Add images for results -->
+<div class="columns is-multiline">
+  <!-- First row - Ant results -->
+  <div class="column is-12">
+    <h3 class="title is-5">Ant Environment Results</h3>
+  </div>
+  <!-- Left side image -->
+  <div class="column is-6">
+    <figure class="image">
+      <img src="static/images/ant-results/AntBulletEnv-v0actorloss.png" alt="Ant Losses Plot">
+      <figcaption class="has-text-centered">Actor loss curves for different approaches in the Ant environment</figcaption>
+    </figure>
+  </div>
+  <!-- Right side image -->
+  <div class="column is-6">
+    <figure class="image">
+      <img src="static/images/ant-results/AntBulletEnv-v0criticloss.png" alt="Ant Losses Plot">
+      <figcaption class="has-text-centered">Critic loss curves for different approaches in the Ant environment</figcaption>
+    </figure>
+  </div>
+
+  <!-- Left side image -->
+  <div class="column is-6">
+    <figure class="image">
+      <img src="static/images/ant-results/AntBulletEnv-v0testepisode_score.png" alt="Ant Rewards Plot">
+      <figcaption class="has-text-centered">Test episode curves for different approaches in the Ant environment</figcaption>
+    </figure>
+  </div>
+  <!-- Right side image -->
+  <div class="column is-6">
+    <figure class="image">
+      <img src="static/images/ant-results/AntBulletEnv-v0trainepisode_score.png" alt="Ant Rewards Plot">
+      <figcaption class="has-text-centered">Train episode curves for different approaches in the Ant environment</figcaption>
+    </figure>
   </div>
 </div>
+  <p>Based on the test ep scores, the modular approach seems to perform the best. Its actor loss reduces the fastest and settles at the smallest values, meaning the policy is finding actions the critic rates highly. Modular DDPG achieves the highest training and test episode scores and maintains the full 1600-step episode horizon for most rollouts, indicating it keeps the ant upright and moving for the maximum duration.
+    The hierarchical and hybrid agents outperform the vanilla DDPG approach. Both show smoothly decreasing actor loss and critic loss, and their reward values climb steadily. Although its actor loss falls, the vanilla approach’s critic’s poor estimates mislead the policy, resulting in lower episode scores and frequent early terminations. 
+    Hence, decomposing the 8-joint ant problem, either fully (modular) or partially (hierarchical/hybrid), gives the critic clearer gradients and lets the policy explore more effectively, while the single monolithic actor-critic pair of vanilla DDPG struggles with coordination in this high-dimensional action space.
+    </p>
+  </li>
+
+  <li> <h2 class="title is-4">Bipedal Walker</h2></li>
+  <!-- Add images for results -->
+<div class="columns is-multiline">
+  <!-- First row - Ant results -->
+  <div class="column is-12">
+    <h3 class="title is-5">Bipedal Walker Environment Results</h3>
+  </div>
+  <!-- Left side image -->
+  <div class="column is-6">
+    <figure class="image">
+      <img src="static/images/bipedal-results/BipedalWalker-v3actorloss.png" alt="Ant Losses Plot">
+      <figcaption class="has-text-centered">Actor loss curves for different approaches in the Bipedal Walker environment</figcaption>
+    </figure>
+  </div>
+  <!-- Right side image -->
+  <div class="column is-6">
+    <figure class="image">
+      <img src="static/images/bipedal-results/BipedalWalker-v3criticloss.png" alt="Ant Losses Plot">
+      <figcaption class="has-text-centered">Critic losses for different approaches in the Ant environment</figcaption>
+    </figure>
+  </div>
+
+  <!-- Second row - Bipedal Walker results -->
+  <div class="column is-12">
+    <h3 class="title is-5">Bipedal Walker Environment Results</h3>
+  </div>
+  <!-- Left side image -->
+  <div class="column is-6">
+    <figure class="image">
+      <img src="static/images/bipedal-results/BipedalWalker-v3testepisode_score.png" alt="Bipedal Walker Rewards Plot">
+      <figcaption class="has-text-centered">Test episode reward curves for different approaches in the Bipedal Walker environment</figcaption>
+    </figure>
+  </div>
+  <!-- Right side image -->
+  <div class="column is-6">
+    <figure class="image">
+      <img src="static/images/bipedal-results/BipedalWalker-v3trainepisode_score.png" alt="Bipedal Walker Rewards Plot">
+      <figcaption class="has-text-centered">Train episode reward curves for different approaches in the Bipedal Walker environment</figcaption>
+    </figure>
+  </div>
 </div>
-</section>
-<!-- End image carousel -->
+  <p>
+    Here, for vanilla DDPG, although its critic sometimes goes up (loss goes up to > 20) and the actor loss goes down to -125, by about 1 million steps the critic saturates down and the policy’s train and test episode scores climb up to the 250 to 300 range. The hierarchical and hybrid variants are similar to the vanilla DDPG values. Both groups keep their critic losses in the 3 to 6 range throughout training and their actor losses go down toward -30, suggesting a slower policy improvement process compared to vanilla’s unstable spikes.
+But we also observed that the modular agent struggles. Its critic stays well-behaved but the actor loss is the highest. Its episode scores are lower and seem to be unstable, with many short test rollouts based on the episode lengths we observed. 
+In the Bipedal environment, coordination amongst all joints is imperative due to the importance of maintaining balance. Through the graphs we can confirm this as vanilla DDPG and hierarchical DDPG outperform the other modular approaches. In the hierarchical variant, the last actor is aware of the previous actions, allowing for better coordination.
+    </p>
+  </li>
 
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
+</ul>
+          </p>        
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End youtube video -->
 
+<!-- Conclusion -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-2">Conclusion</h2>
+        <div class="content has-text-justified">
+          <p>
+            Overall, our results indicate that while modular and hierarchical variants of DDPG can offer significant advantages in high dimensional control tasks like Ant, they may struggle in lower-dimensional environments like Bipedal Walker, where tight coordination across action dimensions is critical. Modular DDPG outperforms others in Ant by decomposing control into manageable sub-policies, resulting in better stability. However, in Bipedal Walker, the same decomposition hinders fine grained coordination, leading to performance worse than the monolithic vanilla DDPG approach. 
 
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
+            Finally, we can conclude that the effectiveness of modularization is task-dependent, benefiting complex multi-joint control but potentially harming simpler, tightly coupled movement tasks where balance is important.
+                 </p>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
-
+<!-- End paper abstract -->
 
 <!--BibTex citation -->
   <section class="section" id="BibTeX">

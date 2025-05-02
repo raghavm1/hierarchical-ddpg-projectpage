@@ -171,6 +171,7 @@ For stable training, time-delayed copies of both the actor and target networks a
 
 The critic loss is formulated in a manner to reduce the difference between the Q(s,a) value estimates with the target Q(s’, a’) values produced by the target critic network. The structure of the loss follows the Bellman update equation.
 <img src="./static/images/ddpg_critic_loss.png" alt="Modular Architecture"> 
+<br>
 The actor network is updated by minimizing the negative of the expected Q value.
           </p>
         </div>
